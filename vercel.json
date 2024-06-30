@@ -1,15 +1,9 @@
 {
-  "routes": [
+  "version": 2,
+  "builds": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "src": "next.config.js",
+      "use": "@vercel/next"
     }
   ]
 }

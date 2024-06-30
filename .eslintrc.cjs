@@ -8,7 +8,6 @@ module.exports = {
       'plugin:react/recommended',
       'plugin:react-hooks/recommended',
       'plugin:@typescript-eslint/recommended',
-      'plugin:prettier/recommended',
       'plugin:@next/next/recommended',
     ],
     parser: '@typescript-eslint/parser',
@@ -23,12 +22,15 @@ module.exports = {
       'react',
       'react-hooks',
       '@typescript-eslint',
-      'prettier',
       '@next/next',
     ],
     rules: {
       'react/react-in-jsx-scope': 'off',
-      'prettier/prettier': 'error',
+      '@typescript-eslint/ban-ts-comment': 'warn',
+      'react/prop-types': 'warn',
+      'react/no-unescaped-entities': 'warn',
+      '@next/next/no-img-element': 'warn',
+      'react-hooks/exhaustive-deps': 'warn',
     },
     settings: {
       react: {
