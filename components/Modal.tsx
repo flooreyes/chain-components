@@ -37,14 +37,16 @@ const Modal: React.FC<ModalProps> = ({
     };
 
     const formatComponentCode = (code: string, fileName: string): string => {
-        const componentName =
-            fileName
-                .replace(/\.svg$/, '')
-                .replace(/-./g, (x) => x[1].toUpperCase()) + 'Icon';
+        const parts = fileName.replace('.svg', '').split('-');
+        const chainName = parts[0];
+        const theme = parts[1];
+        const chainId = parts.length > 2 ? parts[2] : null;
+
+        const componentName = `${chainName}${theme.charAt(0).toUpperCase() + theme.slice(1)}Icon`;
         const formattedCode = code
             .replace(
                 /<svg([^>]*)>/,
-                `<svg viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>`
+                `<svg ${chainId ? `id="${chainId}" ` : ''}viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>`
             )
             .replace(/height="[^"]*"/g, '')
             .replace(/width="[^"]*"/g, '');
@@ -63,17 +65,7 @@ ${formattedCode
         return code
             .replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/("(.*?)")/g, '<span style="color: #ce9178;">$1</span>')
-            .replace(
-                /(&lt;!--.*?--&gt;)/g,
-                '<span style="color: #6a9955;">$1</span>'
-            )
-            .replace(
-                /(&lt;\/?[\w\s="']+&gt;)/g,
-                '<span style="color: #569cd6;">$1</span>'
-            )
-            .replace(/(\b\w+=)/g, '<span style="color: #9cdcfe;">$1</span>');
+            .replace(/>/g, '&gt;');
     };
 
     const formattedSVGCode = highlightCode(formatSVGCode(svgCode));
@@ -118,8 +110,12 @@ ${formattedCode
     };
 
     const handleDownload = () => {
+        const parts = content.replace('.svg', '').split('-');
+        const chainName = parts[0];
+        const theme = parts[1];
+        const componentName = `${chainName}${theme.charAt(0).toUpperCase() + theme.slice(1)}Icon`;
         const filename = componentMode
-            ? `${content.replace(/\.svg$/, '').replace(/-./g, (x) => x[1].toUpperCase())}Icon.tsx`
+            ? `${componentName}.tsx`
             : `${content}.svg`;
         const code = componentMode
             ? formatComponentCode(svgCode, content)
@@ -127,17 +123,25 @@ ${formattedCode
         downloadFile(filename, code);
     };
 
+    const getFilenamePreview = () => {
+        const parts = content.replace('.svg', '').split('-');
+        const chainName = parts[0];
+        const theme = parts[1];
+        const componentName = `${chainName}${theme.charAt(0).toUpperCase() + theme.slice(1)}Icon`;
+        return componentMode ? `${componentName}.tsx` : `${content}.svg`;
+    };
+
     return (
         <div
-            className="fixed inset-0 flex items-center justify-center bg-white/20  "
+            className="fixed inset-0 flex items-center justify-center bg-white/20"
             onClick={onClose}
         >
             <div
-                className="bg-gray-900/65 backdrop-blur-2xl rounded-3xl max-h-[40rem] shadow-lg relative max-w-5xl w-full px-8 py-8 flex flex-row space-x-8 "
+                className="bg-gray-900/65 backdrop-blur-2xl rounded-3xl max-h-[40rem] shadow-lg relative max-w-5xl w-full px-8 py-8 flex flex-row space-x-8"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="flex justify-between flex-col w-full space-y-4">
-                    <div className="flex flex-row h-8 w-full justify-between ">
+                    <div className="flex flex-row h-8 w-full justify-between">
                         <div>
                             <button
                                 className={` px-4 pb-2 ${
@@ -161,16 +165,15 @@ ${formattedCode
                             </button>
                         </div>
                         <div className="flex flex-row w-2/3 items-center mb-2">
-                                <img
-                                    src={imageUrl}
-                                    alt={content}
-                                    className=" w-8 h-8 mr-4"
-                                />
-                                <p className=" text-gray-200 text-2xl font-thin">
-                                    {content}
-                                    {componentMode ? '.tsx' : '.svg'}
-                                </p>
-                            </div>
+                            <img
+                                src={imageUrl}
+                                alt={content}
+                                className=" w-8 h-8 mr-4"
+                            />
+                            <p className=" text-gray-200 text-2xl font-thin">
+                                {getFilenamePreview()}
+                            </p>
+                        </div>
                         <button
                             className="absolute top-4 right-4 text-gray-300 hover:text-rose-500"
                             onClick={onClose}
@@ -178,7 +181,7 @@ ${formattedCode
                             <LuX size={'1.5em'} />
                         </button>
                     </div>
-                    <div className="w-full  flex flex-row rounded-3xl overflow-hidden">
+                    <div className="w-full flex flex-row rounded-3xl overflow-hidden">
                         <div className="1/3 p-1">
                             <img
                                 src={imageUrl}
@@ -187,9 +190,8 @@ ${formattedCode
                             />
                         </div>
                         <div className="w-2/3 flex flex-col h-full">
-     
                             <pre
-                                className="bg-black/70 text-gray-200/70 font-mono overflow-auto text-xs font-thin whitespace-pre p-4 h-96  rounded-xl"
+                                className="bg-black/70 text-gray-200/70 font-mono overflow-auto text-xs font-thin whitespace-pre p-4 h-96 rounded-xl"
                                 dangerouslySetInnerHTML={{
                                     __html: componentMode
                                         ? formattedComponentCode

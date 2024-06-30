@@ -11,7 +11,7 @@ const Menu = () => {
                 <div className="absolute h-[40rem] w-[26.3rem] left-4  bottom-20 rounded-2xl pr-2 backdrop-blur-md ring-1 ring-black ring-opacity-5 bg-white/70 overflow-hidden">
                     <div className="relative w-full h-full overflow-y-auto overflow-x-hidden p-4">
                         <button
-                            className="absolute top-2 right-2 text-gray-500 hover:text-rose-600"
+                            className="absolute top-4 right-2 text-gray-500 hover:text-rose-600"
                             onClick={() => setDropdownVisible(false)}
                         >
                             <LuX size={'1.5em'} />
@@ -110,7 +110,7 @@ const Menu = () => {
             )}
             <div className="flex flex-row space-x-2 fixed bottom-4 left-4">
                 <a
-                    href="https://github.com/flooreyes"
+                    href="https://github.com/flooreyes/chainicons"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex px-4 py-6 justify-center rounded-lg items-center w-auto h-6 drop-shadow-[0px_0px_8px_rgba(0,0,0,0.15)] bg-white/70 backdrop-blur-sm"

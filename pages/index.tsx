@@ -44,7 +44,7 @@ const App = () => {
     const margin = 250; // Margin around the content
     const minimapScale = 0.08; // Scale factor for minimap
     const dampingFactor = 0.7; // Damping factor for slower panning
-    const velocityFactor = 0.01; // Factor to control panning speed
+    const velocityFactor = 0.005; // Factor to control panning speed
 
     const [isIdle, setIsIdle] = useState<boolean>(true);
     const [isOverCanvas, setIsOverCanvas] = useState<boolean>(false);
