@@ -6,11 +6,12 @@ Blockchain icons resource for cracked frontend devs.
 
 ```sh
 npm install chainicons
-Usage
-Import components from the package and use freely in pages & components:
+```
 
-jsx
-Copy code
+## Usage
+
+Import components from the package and use freely in pages & components:
+```js
 import { ArbitrumLightIcon } from 'chainicons';
 
 export default function Page() {
@@ -18,24 +19,27 @@ export default function Page() {
     <ArbitrumLightIcon className='h-8 w-8' />
   );
 }
+```
+
 Style with Tailwind using className prop:
 
-jsx
-Copy code
+```jsx
 export default function Page() {
   return (
     <ArbitrumLightIcon className='h-8 w-8' />
   );
 }
+```
+
 Make it a circle:
 
-jsx
-Copy code
+```jsx
 <BaseDarkIcon className='h-8 w-8 rounded-full'/>
-Pass props if you're not using Tailwind:
+```
+Pass props if you're not tailwind pilled:
 
-jsx
-Copy code
+
+```jsx
 export default function Page() {
   return (
     <ArbitrumLightIcon
@@ -44,11 +48,15 @@ export default function Page() {
     />
   );
 }
-Download component library
-Download or copy chainicons.tsx into your React or Next.js app's desired directory. Import components from the local directory and use them freely in pages & components:
+```
 
-jsx
-Copy code
+## Download component library
+
+Download or copy chainicons.tsx from chains.floorey.es into your React or Next.js app's desired directory. 
+
+Import components from the local directory and use them freely in pages & components:
+
+```jsx
 import { ArbitrumLightIcon } from '@/chainicons.ts';
 
 export default function Page() {
@@ -56,11 +64,15 @@ export default function Page() {
     <ArbitrumLightIcon className='h-8 w-8' />
   );
 }
-Download SVG Library
-Download or copy chainicons.tsx into your React or Next.js app's public/chainicons directory. This is a good resource for designers, or if you just use Next Image tags:
+```
 
-jsx
-Copy code
+## Download SVG Library
+
+Download or copy chainicons.tsx into your React or Next.js app's public/chainicons directory. 
+
+This is a good resource for designers, or if you just use Next Image tags:
+
+```jsx
 import ArbitrumLightIcon from 'public/images/chainicons/ArbitrumLightIcon';
 
 export default function Page() {
@@ -73,11 +85,13 @@ export default function Page() {
     />
   );
 }
-Copy in component code
+```
+
+## Copy in component code
+
 Select any icon to copy the formatted React component code, or download a single TSX file. Example:
 
-jsx
-Copy code
+```jsx
 export const BaseDarkIcon = (props) => {
   return (
     <svg viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -101,14 +115,11 @@ export const BaseDarkIcon = (props) => {
     </svg>
   );
 };
-Copy in SVG code
+```
+
+## Copy in SVG code
+
 Select any icon to copy or download the raw SVG code.
-
-csharp
-Copy code
-
-This should ensure that your modal content is well-formatted and your README.md file is clear and informative.
-
 
 
 
