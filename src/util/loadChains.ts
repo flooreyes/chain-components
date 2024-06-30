@@ -2,7 +2,7 @@
 import { ChainsElement } from './types';
 
 const loadChains = async (): Promise<ChainsElement[]> => {
-    const modules = import.meta.glob('/src/chains/*.svg', { as: 'raw' });
+    const modules = import.meta.glob('/public/chains/*.svg', { as: 'raw' });
     const chains: ChainsElement[] = [];
 
     for (const path in modules) {
