@@ -39,7 +39,7 @@ const App = () => {
     const clickStartTime = useRef<number | null>(null);
     const clickThreshold = 200; // Threshold in milliseconds to distinguish between click and drag
 
-    const size = 0.58; // Scale factor for the size of each chain
+    const size = 0.5; // Scale factor for the size of each chain
     const margin = 250; // Margin around the content
     const minimapScale = 0.08; // Scale factor for minimap
     const dampingFactor = 0.7; // Damping factor for slower panning

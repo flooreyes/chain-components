@@ -2,6 +2,9 @@
 
 Blockchain icons resource for cracked frontend devs.
 
+![ui screenshot](/public/images/screenshot.png)
+
+
 ## Installation
 
 ```sh
@@ -57,7 +60,7 @@ Download or copy chainicons.tsx from chains.floorey.es into your React or Next.j
 Import components from the local directory and use them freely in pages & components:
 
 ```jsx
-import { ArbitrumLightIcon } from '@/chainicons.ts';
+import { ArbitrumLightIcon } from '@/chainicons.tsx';
 
 export default function Page() {
   return (
