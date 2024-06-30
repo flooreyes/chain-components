@@ -124,6 +124,10 @@ export const BaseDarkIcon = (props) => {
 
 Select any icon to copy or download the raw SVG code.
 
+![ui screenshot](/public/images/screenshot2.png)
+
+
+
 
 
 

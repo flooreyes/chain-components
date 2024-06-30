@@ -12,27 +12,27 @@ const Export = () => {
         setDropdownVisible(false);
     };
 
-    const handleExport = async (ext) => {
-        if (ext === 'svg') {
-            try {
-                const response = await fetch('/api/downloadZip');
-                if (!response.ok) {
-                    throw new Error('Failed to fetch the zip file');
-                }
+    // const handleExport = async (ext) => {
+    //     if (ext === 'svg') {
+    //         try {
+    //             const response = await fetch('/api/downloadZip');
+    //             if (!response.ok) {
+    //                 throw new Error('Failed to fetch the zip file');
+    //             }
 
-                const blob = await response.blob();
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'chainicons.zip';
-                document.body.appendChild(a);
-                a.click();
-                a.remove();
-            } catch (error) {
-                console.error('Error exporting SVG:', error);
-            }
-        }
-    };
+    //             const blob = await response.blob();
+    //             const url = window.URL.createObjectURL(blob);
+    //             const a = document.createElement('a');
+    //             a.href = url;
+    //             a.download = 'chainicons.zip';
+    //             document.body.appendChild(a);
+    //             a.click();
+    //             a.remove();
+    //         } catch (error) {
+    //             console.error('Error exporting SVG:', error);
+    //         }
+    //     }
+    // };
 
     return (
         <div
@@ -51,13 +51,13 @@ const Export = () => {
                     <ul>
                         <li
                             className="cursor-pointer py-2 items-center px-4 hover:bg-gray-100"
-                            onClick={() => handleExport('svg')}
+                            // onClick={() => handleExport('svg')}
                         >
                             SVG Files
                         </li>
                         <li
                             className="cursor-pointer py-2 items-center px-4 hover:bg-gray-100"
-                            onClick={() => handleExport('tsx')}
+                            // onClick={() => handleExport('tsx')}
                         >
                             TSX Files
                         </li>
