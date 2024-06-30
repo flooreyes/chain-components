@@ -1,11 +1,11 @@
 //@ts-nocheck
 import { useEffect, useRef, useState } from 'react';
-import { CoordinateInterface, Cursor, ChainsElement } from '../util/types';
-import Menu from '../components/Menu';
-import SearchBar from '../components/SearchBar';
-import Background from '../components/Background';
-import Modal from '../components/Modal';
-import loadChains from '../util/loadChains';
+import { CoordinateInterface, Cursor, ChainsElement } from '../src/util/types';
+import Menu from '../src/components/Menu';
+import SearchBar from '../src/components/SearchBar';
+import Background from '../src/components/Background';
+import Modal from '../src/components/Modal';
+import loadChains from '../src/util/loadChains';
 
 const App = () => {
     const [chains, setChains] = useState<ChainsElement[]>([]);

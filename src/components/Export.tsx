@@ -60,7 +60,7 @@ ${formattedCode
 
                 // Generate the zip file and trigger download
                 const content = await zip.generateAsync({ type: 'blob' });
-                saveAs(content, 'chainicons.zip');
+                saveAs(content, 'chainiconsSVG.zip');
             } catch (error) {
                 console.error('Error exporting SVG:', error);
             }
@@ -84,7 +84,7 @@ ${formattedCode
                 const element = document.createElement('a');
                 const file = new Blob([tsxContent], { type: 'text/plain' });
                 element.href = URL.createObjectURL(file);
-                element.download = 'chainicons.tsx';
+                element.download = 'chainiconsComponents.tsx';
                 document.body.appendChild(element);
                 element.click();
             } catch (error) {
