@@ -17,7 +17,8 @@ module.exports = {
     rules: {
       '@typescript-eslint/ban-ts-comment': 'warn',
       'react/prop-types': 'off',
-      'prettier/prettier': 'warn'
+      'prettier/prettier': 'warn',
+      'react/react-in-jsx-scope': 'warn' // Add this line
     },
     settings: {
       react: {
