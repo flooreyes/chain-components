@@ -57,7 +57,7 @@ const App = () => {
         const load = async () => {
             const loadedChains = await loadChains();
             const totalChains = loadedChains.length;
-            const aspectRatio = 4 / 3; // Landscape aspect ratio
+            const aspectRatio = 4 / 4; // Landscape aspect ratio
 
             // Calculate the best even number of columns based on the aspect ratio
             let bestColumns = Math.max(
