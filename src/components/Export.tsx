@@ -17,8 +17,9 @@ const Export = () => {
             try {
                 const response = await fetch('/api/downloadZip');
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error('Failed to fetch the zip file');
                 }
+
                 const blob = await response.blob();
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');
