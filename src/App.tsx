@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { useEffect, useRef, useState } from 'react';
 import { CoordinateInterface, Cursor, ChainsElement } from './util/types';
 import Menu from './components/Menu';

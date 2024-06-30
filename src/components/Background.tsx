@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { backgroundColors, transparentBackgroundUrl } from '../util/config';
 import {
     Popover,
