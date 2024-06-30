@@ -1,5 +1,5 @@
 {
-    "name": "chainicons",
+    "name": "chain-components",
     "private": false,
     "version": "1.0.0",
     "type": "commonjs",
@@ -14,7 +14,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/flooreyes/chainicons.git"
+      "url": "git+https://github.com/flooreyes/chain-components.git"
     },
     "keywords": [
       "react",
@@ -26,9 +26,9 @@
     "author": "Flooreyes",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/flooreyes/chainicons/issues"
+      "url": "https://github.com/flooreyes/chain-components/issues"
     },
-    "homepage": "https://github.com/flooreyes/chainicons#readme",
+    "homepage": "https://github.com/flooreyes/chain-components#readme",
     "dependencies": {
       "@radix-ui/react-popover": "^1.0.7",
       "@vercel/next": "^4.2.18",

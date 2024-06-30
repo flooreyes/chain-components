@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     content="React, Next, Icons, Icon Library, Crypto, Blockchains, Chains, Chain Configs"
                 />
                 <meta name="author" content="@0xflooreyes" />
-                <title>chainicons by @0xflooreyes</title>
+                <title>chain-components by @0xflooreyes</title>
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"

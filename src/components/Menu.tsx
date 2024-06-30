@@ -16,12 +16,12 @@ const Menu = () => {
                         >
                             <LuX size={'1.5em'} />
                         </button>
-                        <h1 className="text-5xl font-thin mb-2">ChainIcons</h1>
+                        <h1 className="text-[2.7rem] font-thin mb-2">Chain Components</h1>
                         <p className="mb-6 text-sm">
                             Blockchain icons resource for cracked frontend devs
                         </p>
                         <div className="mt-2 w-full bg-white/40 py-2 px-8 font-mono rounded mb-4">
-                            npm install chainicons
+                            npm install chain-components
                         </div>
                         <h2 className="my-4 text-2xl font-thin">Usage</h2>
                         <p className="mt-4 text-sm mb-2">
@@ -30,7 +30,7 @@ const Menu = () => {
                         </p>
                         <pre className="bg-gray-900/75 text-white p-4 rounded text-[.7rem]">
                             <code>
-                                {`import { ArbitrumLightIcon } from 'chainicons';\n\nexport default function Page() {\n  return (\n    <ArbitrumLightIcon />\n  );\n}`}
+                                {`import { ArbitrumLightIcon } from 'chain-components';\n\nexport default function Page() {\n  return (\n    <ArbitrumLightIcon />\n  );\n}`}
                             </code>
                         </pre>
                         <p className="my-2 text-sm">
@@ -60,29 +60,29 @@ const Menu = () => {
                             Download component library:
                         </h2>
                         <p className="text-sm mb-2">
-                            Download or copy <code>chainicons.tsx</code> into
+                            Download or copy <code>chainComponents.tsx</code> into
                             your React or Next.js app's desired directory.
                             Import components from the local directory and use
                             them freely in pages & components:
                         </p>
                         <pre className="bg-gray-900/75 text-white p-4 rounded text-[.7rem]">
                             <code>
-                                {`import { ArbitrumLightIcon } from '@/chainicons.ts';\n\nexport default function Page() {\n  return (\n    <ArbitrumLightIcon className='h-8 w-8' />\n  );\n}`}
+                                {`import { ArbitrumLightIcon } from '@/chain-components.ts';\n\nexport default function Page() {\n  return (\n    <ArbitrumLightIcon className='h-8 w-8' />\n  );\n}`}
                             </code>
                         </pre>
                         <h2 className="my-4 text-2xl font-thin">
                             Download SVG Library:
                         </h2>
                         <p className="text-sm mb-2">
-                            Download or copy <code>chainicons.tsx</code> into
+                            Download or copy <code>chainComponents.tsx</code> into
                             your React or Next.js app's{' '}
-                            <code>public/chainicons</code> directory. This is a
+                            <code>public/chain-components</code> directory. This is a
                             good resource for designers, or if you just use Next
                             Image tags:
                         </p>
                         <pre className="bg-gray-900/75 text-white p-4 rounded text-[.7rem]">
                             <code>
-                                {`import ArbitrumLightIcon from 'public/images/chainicons/ArbitrumLightIcon';\n\nexport default function Page() {\n  return (\n    <Image\n      src={ArbitrumLightIcon}\n      width={500}\n      height={500}\n      alt="ArbitrumLightIcon"\n    />\n  );\n}`}
+                                {`import ArbitrumLightIcon from 'public/images/chainComponents/ArbitrumLightIcon';\n\nexport default function Page() {\n  return (\n    <Image\n      src={ArbitrumLightIcon}\n      width={500}\n      height={500}\n      alt="ArbitrumLightIcon"\n    />\n  );\n}`}
                             </code>
                         </pre>
                         <h2 className="my-4 text-2xl font-thin">
@@ -110,7 +110,7 @@ const Menu = () => {
             )}
             <div className="flex flex-row space-x-2 fixed bottom-4 left-4">
                 <a
-                    href="https://github.com/flooreyes/chainicons"
+                    href="https://github.com/flooreyes/chain-components"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex px-4 py-6 justify-center rounded-lg items-center w-auto h-6 drop-shadow-[0px_0px_8px_rgba(0,0,0,0.15)] bg-white/70 backdrop-blur-sm"

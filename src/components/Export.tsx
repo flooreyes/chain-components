@@ -43,7 +43,7 @@ ${formattedCode
         if (ext === 'svg') {
             try {
                 const zip = new JSZip();
-                const folder = zip.folder('chainiconsSVG');
+                const folder = zip.folder('chain-componentsSVG');
 
                 // Fetch the list of files in the /public/chains directory
                 const response = await fetch('/api/getChains');
@@ -60,7 +60,7 @@ ${formattedCode
 
                 // Generate the zip file and trigger download
                 const content = await zip.generateAsync({ type: 'blob' });
-                saveAs(content, 'chainiconsSVG.zip');
+                saveAs(content, 'chainComponentsSVG.zip');
             } catch (error) {
                 console.error('Error exporting SVG:', error);
             }
@@ -84,7 +84,7 @@ ${formattedCode
                 const element = document.createElement('a');
                 const file = new Blob([tsxContent], { type: 'text/plain' });
                 element.href = URL.createObjectURL(file);
-                element.download = 'chainiconsComponents.tsx';
+                element.download = 'chainComponents.tsx';
                 document.body.appendChild(element);
                 element.click();
             } catch (error) {

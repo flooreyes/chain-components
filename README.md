@@ -1,4 +1,4 @@
-# ChainIcons
+# chain-components
 
 Blockchain icons resource for cracked frontend devs.
 
@@ -8,14 +8,14 @@ Blockchain icons resource for cracked frontend devs.
 ## Installation
 
 ```sh
-npm install chainicons
+npm install chain-components
 ```
 
 ## Usage
 
 Import components from the package and use freely in pages & components:
 ```js
-import { ArbitrumLightIcon } from 'chainicons';
+import { ArbitrumLightIcon } from 'chain-components';
 
 export default function Page() {
   return (
@@ -55,12 +55,12 @@ export default function Page() {
 
 ## Download component library
 
-Download or copy chainicons.tsx from chains.floorey.es into your React or Next.js app's desired directory. 
+Download or copy chainComponents.tsx from chains.floorey.es into your React or Next.js app's desired directory. 
 
 Import components from the local directory and use them freely in pages & components:
 
 ```jsx
-import { ArbitrumLightIcon } from '@/chainicons.tsx';
+import { ArbitrumLightIcon } from '@/chainComponents.tsx';
 
 export default function Page() {
   return (
@@ -71,12 +71,12 @@ export default function Page() {
 
 ## Download SVG Library
 
-Download or copy chainicons.tsx into your React or Next.js app's public/chainicons directory. 
+Download or copy chain-components.tsx into your React or Next.js app's public/chain-components directory. 
 
 This is a good resource for designers, or if you just use Next Image tags:
 
 ```jsx
-import ArbitrumLightIcon from 'public/images/chainicons/ArbitrumLightIcon';
+import ArbitrumLightIcon from 'public/images/chain-components/ArbitrumLightIcon';
 
 export default function Page() {
   return (
