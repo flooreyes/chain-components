@@ -36,6 +36,18 @@ const Modal: React.FC<ModalProps> = ({
             .join('\n');
     };
 
+    const toCamelCase = (str: string): string => {
+        return str.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+    };
+
+    const camelCaseAttributes = (svgContent: string): string => {
+        const regex = /(\s+)([a-z0-9]+-[a-z0-9]+)=/g;
+        return svgContent.replace(regex, (_, space, attr) => {
+            const camelCasedAttr = toCamelCase(attr);
+            return `${space}${camelCasedAttr}=`;
+        });
+    };
+
     const formatComponentCode = (code: string, fileName: string): string => {
         const parts = fileName.replace('.svg', '').split('-');
         const chainName = parts[0];
@@ -43,22 +55,27 @@ const Modal: React.FC<ModalProps> = ({
         const chainId = parts.length > 2 ? parts[2] : null;
 
         const componentName = `${chainName}${theme.charAt(0).toUpperCase() + theme.slice(1)}Icon`;
-        const formattedCode = code
+        const camelCasedCode = camelCaseAttributes(code);
+
+        const formattedCode = camelCasedCode
             .replace(
                 /<svg([^>]*)>/,
-                `<svg ${chainId ? `id="${chainId}" ` : ''}viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>`
+                `<svg ${chainId ? `id="${chainId}" ` : ''} viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>`
             )
             .replace(/height="[^"]*"/g, '')
             .replace(/width="[^"]*"/g, '');
 
-        return `export const ${componentName} = (props) => {
+        return `import React from 'react';
+//@ts-ignore
+export const ${componentName} = (props) => {
     return (
 ${formattedCode
-    .split('\n')
-    .map((line) => '        ' + line)
-    .join('\n')}
+        .split('\n')
+        .map((line) => '        ' + line)
+        .join('\n')}
     );
-};`;
+};
+`;
     };
 
     const highlightCode = (code: string): string => {
@@ -182,14 +199,14 @@ ${formattedCode
                         </button>
                     </div>
                     <div className="w-full flex flex-row rounded-3xl overflow-hidden">
-                        <div className="1/3 p-1">
+                        <div className="1/3 p-1 md:flex hidden">
                             <img
                                 src={imageUrl}
                                 alt={content}
                                 className=" mb-4 pr-10 py-0 h-full p-2"
                             />
                         </div>
-                        <div className="w-2/3 flex flex-col h-full">
+                        <div className="md:w-2/3 flex flex-col h-full mt-4 md:mt-0">
                             <pre
                                 className="bg-black/70 text-gray-200/70 font-mono overflow-auto text-xs font-thin whitespace-pre p-4 h-96 rounded-xl"
                                 dangerouslySetInnerHTML={{
@@ -201,7 +218,7 @@ ${formattedCode
                         </div>
                     </div>
                     {componentMode ? (
-                        <div className="flex flex-row w-full space-x-4">
+                        <div className="flex flex-row w-full  space-y-0 space-x-4">
                             <button
                                 className="bg-white/20 text-white py-2 rounded-lg w-full hover:bg-white hover:text-black transition duration-100 flex items-center justify-center space-x-2"
                                 onClick={handleCopy}

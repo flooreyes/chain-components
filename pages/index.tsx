@@ -535,7 +535,7 @@ const App = () => {
                 />
             </div>
             <div
-                className="hidden md:block fixed bottom-3 right-4 bg-white/50 backdrop-blur-sm z-[2000] rounded-xl"
+                className="fixed bottom-3 right-4 bg-white/50 backdrop-blur-sm z-[2000] rounded-xl -translate-x-72 "
                 style={{
                     width: `${svgBounds.width * minimapScale}px`,
                     height: `${svgBounds.height * minimapScale}px`,
@@ -543,13 +543,13 @@ const App = () => {
             >
                 <canvas
                     ref={minimapRef}
-                    className="absolute top-0 left-0 opacity-70"
+                    className="absolute top-0 left-0 opacity-70 -translate-x-72"
                     width={svgBounds.width * minimapScale}
                     height={svgBounds.height * minimapScale}
                 />
                 <div
                     ref={redBoxRef}
-                    className="absolute border border-red-500 z-[3000] rounded-lg"
+                    className="absolute border border-red-500 z-[3000] rounded-lg -translate-x-72"
                     style={{
                         boxSizing: 'border-box',
                     }}
