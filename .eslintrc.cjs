@@ -18,7 +18,8 @@ module.exports = {
       '@typescript-eslint/ban-ts-comment': 'warn',
       'react/prop-types': 'off',
       'prettier/prettier': 'warn',
-      'react/react-in-jsx-scope': 'warn' // Add this line
+      'react/react-in-jsx-scope': 'warn',
+      'react/no-unescaped-entities': 'off' // Turn off this rule
     },
     settings: {
       react: {
