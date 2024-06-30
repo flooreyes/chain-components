@@ -98,7 +98,6 @@ ${formattedCode
                     );
                 }
             },
-            (err) => alert('Failed to copy to clipboard: ')
         );
     };
 

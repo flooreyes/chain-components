@@ -1,11 +1,11 @@
 //@ts-nocheck
 import { useEffect, useRef, useState } from 'react';
-import { CoordinateInterface, Cursor, ChainsElement } from './util/types';
-import Menu from './components/Menu';
-import SearchBar from './components/SearchBar';
-import Background from './components/Background';
-import Modal from './components/Modal';
-import loadChains from './util/loadChains';
+import { CoordinateInterface, Cursor, ChainsElement } from '../util/types';
+import Menu from '../components/Menu';
+import SearchBar from '../components/SearchBar';
+import Background from '../components/Background';
+import Modal from '../components/Modal';
+import loadChains from '../util/loadChains';
 
 const App = () => {
     const [chains, setChains] = useState<ChainsElement[]>([]);
@@ -14,8 +14,8 @@ const App = () => {
     const [viewBox, setViewBox] = useState({
         x: 0,
         y: 0,
-        w: window.innerWidth,
-        h: window.innerHeight,
+        w: 0,
+        h: 0,
     });
     const [modalOpen, setModalOpen] = useState<boolean>(false);
     const [modalContent, setModalContent] = useState<string>('');
@@ -107,6 +107,17 @@ const App = () => {
         };
 
         load();
+
+        // Set initial viewBox dimensions
+        if (typeof window !== 'undefined') {
+            setViewBox({
+                x: 0,
+                y: 0,
+                w: window.innerWidth,
+                h: window.innerHeight,
+            });
+        }
+
     }, []);
 
     const calculateSvgBounds = (chains: ChainsElement[]) => {
@@ -126,17 +137,19 @@ const App = () => {
             height: maxY - minY,
         });
 
-        setViewBox({
-            x: (minX + maxX - window.innerWidth) / 2,
-            y: (minY + maxY - window.innerHeight) / 2,
-            w: window.innerWidth,
-            h: window.innerHeight,
-        });
+        if (typeof window !== 'undefined') {
+            setViewBox({
+                x: (minX + maxX - window.innerWidth) / 2,
+                y: (minY + maxY - window.innerHeight) / 2,
+                w: window.innerWidth,
+                h: window.innerHeight,
+            });
 
-        // Trigger resize event after initial calculation
-        setTimeout(() => {
-            window.dispatchEvent(new Event('resize'));
-        }, 100);
+            // Trigger resize event after initial calculation
+            setTimeout(() => {
+                window.dispatchEvent(new Event('resize'));
+            }, 100);
+        }
     };
 
     const getInverseGrayscale = (color: string) => {
