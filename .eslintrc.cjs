@@ -19,7 +19,8 @@ module.exports = {
       'react/prop-types': 'off',
       'prettier/prettier': 'off',
       'react/react-in-jsx-scope': 'off',
-      'react/no-unescaped-entities': 'off' 
+      'react/no-unescaped-entities': 'off', 
+      'react/no-unknow-property': 'warn'
     },
     settings: {
       react: {

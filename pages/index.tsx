@@ -534,7 +534,7 @@ const App = () => {
                     viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}`}
                 />
             </div>
-            <div
+            {/* <div
                 className="fixed bottom-3 right-4 bg-white/50 backdrop-blur-sm z-[2000] rounded-xl -translate-x-72 "
                 style={{
                     width: `${svgBounds.width * minimapScale}px`,
@@ -554,7 +554,7 @@ const App = () => {
                         boxSizing: 'border-box',
                     }}
                 />
-            </div>
+            </div> */}
             <Modal
                 isOpen={modalOpen}
                 onClose={() => setModalOpen(false)}
