@@ -1,6 +1,6 @@
 {
     "name": "chain-components",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "chain icon component library for cracked front end devs",
     "main": "generated/index.js",
     "types": "generated/index.d.ts",
