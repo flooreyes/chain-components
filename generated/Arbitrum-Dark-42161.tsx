@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const ArbitrumDarkIcon = (props) => {
+export const ArbitrumDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="42161"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.792 14.7248C218.262 5.79313 237.322 5.79313 252.792 14.7248L430.189 117.145C445.659 126.076 455.189 142.583 455.189 160.446V365.29C455.189 383.154 445.658 399.661 430.187 408.592L252.791 511.006C237.322 519.936 218.263 519.936 202.793 511.006L25.397 408.592C9.92621 399.661 0.395752 383.154 0.395752 365.29V160.446C0.395752 142.583 9.9257 126.076 25.3958 117.145L202.792 14.7248Z" fill="url(#paint0_radial_706_127)"/>

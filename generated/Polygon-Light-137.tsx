@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const PolygonLightIcon = (props) => {
+export const PolygonLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="137"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M203.169 14.5138C218.639 5.58219 237.699 5.58219 253.169 14.5138L430.566 116.934C446.036 125.865 455.566 142.372 455.566 160.235V365.079C455.566 382.943 446.035 399.45 430.564 408.381L253.168 510.795C237.698 519.725 218.64 519.725 203.17 510.795L25.7738 408.381C10.303 399.45 0.772583 382.943 0.772583 365.079V160.235C0.772583 142.372 10.3025 125.865 25.7726 116.934L203.169 14.5138Z" fill="url(#paint0_linear_704_120)"/>

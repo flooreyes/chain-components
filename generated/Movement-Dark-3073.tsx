@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const MovementDarkIcon = (props) => {
+export const MovementDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="3073"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M252.813 510.808C237.343 519.74 218.284 519.74 202.813 510.808L25.417 408.389C9.94695 399.457 0.416986 382.951 0.416985 365.087L0.416976 160.243C0.416975 142.379 9.94745 125.872 25.4182 116.941L202.815 14.5277C218.284 5.59697 237.343 5.59698 252.812 14.5277L430.209 116.941C445.679 125.872 455.21 142.379 455.21 160.243L455.21 365.087C455.21 382.951 445.68 399.457 430.21 408.389L252.813 510.808Z" fill="url(#paint0_linear_710_9712)"/>

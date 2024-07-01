@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const LineaLightIcon = (props) => {
+export const LineaLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="59144"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.858 14.9279C218.328 5.99626 237.388 5.99625 252.858 14.9279L430.255 117.348C445.725 126.279 455.255 142.786 455.255 160.649V365.493C455.255 383.357 445.724 399.864 430.254 408.795L252.857 511.209C237.388 520.139 218.329 520.139 202.86 511.209L25.4631 408.795C9.99237 399.864 0.461914 383.357 0.461914 365.493V160.649C0.461914 142.786 9.99187 126.279 25.4619 117.348L202.858 14.9279Z" fill="url(#paint0_radial_709_6945)"/>

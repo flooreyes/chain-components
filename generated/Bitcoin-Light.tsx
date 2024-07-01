@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const BitcoinLightIcon = (props) => {
+export const BitcoinLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M203.23 15.3244C218.701 6.39274 237.76 6.39274 253.23 15.3244L430.627 117.744C446.097 126.676 455.627 143.182 455.627 161.046V365.89C455.627 383.754 446.096 400.26 430.626 409.192L253.229 511.605C237.76 520.536 218.701 520.536 203.232 511.605L25.8352 409.192C10.3644 400.26 0.833984 383.754 0.833984 365.89V161.046C0.833984 143.182 10.3639 126.676 25.834 117.744L203.23 15.3244Z" fill="url(#paint0_radial_720_102)"/>

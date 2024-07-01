@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const ModeLightIcon = (props) => {
+export const ModeLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="34443"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.854 14.883C218.324 5.95133 237.383 5.95133 252.854 14.883L430.25 117.303C445.72 126.234 455.25 142.741 455.25 160.604V365.449C455.25 383.312 445.72 399.819 430.249 408.75L252.852 511.164C237.383 520.094 218.324 520.094 202.855 511.164L25.4582 408.75C9.98749 399.819 0.457031 383.312 0.457031 365.449V160.604C0.457031 142.741 9.98698 126.234 25.457 117.303L202.854 14.883Z" fill="url(#paint0_radial_722_162)"/>

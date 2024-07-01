@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const CantoLightIcon = (props) => {
+export const CantoLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="7700"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.683 14.6603C218.153 5.72868 237.213 5.72868 252.683 14.6603L430.079 117.08C445.549 126.012 455.079 142.518 455.079 160.381V365.226C455.079 383.09 445.549 399.596 430.078 408.528L252.681 510.941C237.212 519.872 218.153 519.872 202.684 510.941L25.2873 408.528C9.81659 399.596 0.286133 383.09 0.286133 365.226V160.381C0.286133 142.518 9.81608 126.012 25.2861 117.08L202.683 14.6603Z" fill="url(#paint0_radial_722_233)"/>

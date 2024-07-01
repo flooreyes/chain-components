@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const CampLightIcon = (props) => {
+export const CampLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.492 14.7619C217.962 5.83024 237.022 5.83024 252.492 14.7619L429.889 117.182C445.359 126.113 454.889 142.62 454.889 160.483V365.327C454.889 383.191 445.358 399.698 429.887 408.629L252.491 511.043C237.022 519.973 217.963 519.973 202.493 511.043L25.0969 408.629C9.62616 399.698 0.0957031 383.191 0.0957031 365.327V160.483C0.0957031 142.62 9.62565 126.113 25.0957 117.182L202.492 14.7619Z" fill="url(#paint0_radial_722_262)"/>

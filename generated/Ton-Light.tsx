@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const TonLightIcon = (props) => {
+export const TonLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M252.392 511.56C236.922 520.492 217.862 520.492 202.392 511.56L24.9951 409.141C9.52508 400.209 -0.00488903 383.703 -0.00488981 365.839L-0.00489877 160.995C-0.00489955 143.131 9.52558 126.624 24.9963 117.693L202.393 15.2796C217.862 6.34893 236.921 6.34894 252.39 15.2796L429.787 117.693C445.258 126.624 454.788 143.131 454.788 160.995L454.788 365.839C454.788 383.703 445.258 400.209 429.788 409.141L252.392 511.56Z" fill="url(#paint0_radial_709_6984)"/>

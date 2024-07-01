@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const AvalancheLightIcon = (props) => {
+export const AvalancheLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="43114"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M203.198 14.9621C218.668 6.03044 237.728 6.03043 253.198 14.9621L430.595 117.382C446.065 126.314 455.595 142.82 455.595 160.683V365.528C455.595 383.391 446.064 399.898 430.594 408.83L253.197 511.243C237.728 520.174 218.669 520.174 203.199 511.243L25.803 408.83C10.3322 399.898 0.801758 383.391 0.801758 365.528V160.683C0.801758 142.82 10.3317 126.314 25.8018 117.382L203.198 14.9621Z" fill="url(#paint0_radial_704_85)"/>

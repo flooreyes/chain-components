@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const SuiDarkIcon = (props) => {
+export const SuiDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M253.356 510.767C237.886 519.699 218.826 519.699 203.356 510.767L25.9595 408.348C10.4894 399.416 0.959466 382.91 0.959466 365.046L0.959457 160.202C0.959456 142.338 10.4899 125.831 25.9607 116.9L203.357 14.4867C218.827 5.55596 237.885 5.55597 253.355 14.4867L430.751 116.9C446.222 125.831 455.752 142.338 455.752 160.202L455.752 365.046C455.752 382.91 446.222 399.416 430.752 408.348L253.356 510.767Z" fill="url(#paint0_radial_709_6998)"/>

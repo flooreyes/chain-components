@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const EthereumDarkIcon = (props) => {
+export const EthereumDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="1"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.888 15.3556C218.358 6.42399 237.418 6.42399 252.888 15.3556L430.284 117.775C445.754 126.707 455.284 143.213 455.284 161.077V365.921C455.284 383.785 445.754 400.292 430.283 409.223L252.886 511.636C237.417 520.567 218.358 520.567 202.889 511.636L25.4924 409.223C10.0217 400.292 0.491211 383.785 0.491211 365.921V161.077C0.491211 143.213 10.0212 126.707 25.4912 117.775L202.888 15.3556Z" fill="url(#paint0_linear_709_6946)"/>

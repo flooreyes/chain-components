@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const MovementLightIcon = (props) => {
+export const MovementLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="3073"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M253.131 510.724C237.661 519.656 218.601 519.656 203.131 510.724L25.7344 408.305C10.2643 399.373 0.734369 382.867 0.734368 365.003L0.734359 160.159C0.734358 142.295 10.2648 125.788 25.7356 116.857L203.132 14.4437C218.602 5.51299 237.66 5.513 253.13 14.4437L430.526 116.857C445.997 125.788 455.527 142.295 455.527 160.159L455.527 365.003C455.527 382.867 445.997 399.373 430.527 408.305L253.131 510.724Z" fill="url(#paint0_radial_710_9713)"/>

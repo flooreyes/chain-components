@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const CampDarkIcon = (props) => {
+export const CampDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.747 15.1896C218.217 6.25797 237.277 6.25797 252.747 15.1896L430.144 117.609C445.614 126.541 455.144 143.047 455.144 160.911V365.755C455.144 383.619 445.613 400.126 430.142 409.057L252.746 511.47C237.276 520.401 218.218 520.401 202.748 511.47L25.3518 409.057C9.88104 400.126 0.350586 383.619 0.350586 365.755V160.911C0.350586 143.047 9.88054 126.541 25.3506 117.609L202.747 15.1896Z" fill="url(#paint0_radial_722_264)"/>

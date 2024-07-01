@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const MantleDarkIcon = (props) => {
+export const MantleDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="5000"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M203.264 14.4533C218.734 5.52165 237.794 5.52164 253.264 14.4533L430.66 116.873C446.13 125.805 455.66 142.311 455.66 160.174V365.019C455.66 382.883 446.13 399.389 430.659 408.321L253.262 510.734C237.793 519.665 218.734 519.665 203.265 510.734L25.8684 408.321C10.3976 399.389 0.867188 382.883 0.867188 365.019V160.174C0.867188 142.311 10.3971 125.805 25.8672 116.873L203.264 14.4533Z" fill="url(#paint0_linear_722_151)"/>

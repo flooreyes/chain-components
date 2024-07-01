@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const SolanaLightIcon = (props) => {
+export const SolanaLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M203.341 15.4025C218.811 6.47086 237.871 6.47086 253.341 15.4025L430.737 117.822C446.207 126.754 455.737 143.26 455.737 161.124V365.968C455.737 383.832 446.207 400.339 430.736 409.27L253.34 511.683C237.87 520.614 218.811 520.614 203.342 511.683L25.9455 409.27C10.4748 400.339 0.944336 383.832 0.944336 365.968V161.124C0.944336 143.26 10.4743 126.754 25.9443 117.822L203.341 15.4025Z" fill="url(#paint0_radial_709_1600)"/>

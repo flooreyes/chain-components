@@ -1,18 +1,14 @@
 //@ts-nocheck
-import fs from 'fs/promises';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 const chainsDir = path.join(__dirname, '../public/chains');
 const outputDir = path.join(__dirname, '../generated');
 
 // Ensure the output directory exists
-const ensureOutputDirExists = async () => {
-    try {
-        await fs.access(outputDir);
-    } catch (error) {
-        await fs.mkdir(outputDir, { recursive: true });
-    }
-};
+if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+}
 
 // Function to convert kebab-case to camelCase
 const toCamelCase = (str: string): string => {
@@ -48,7 +44,7 @@ const formatComponentCode = (code: string, fileName: string): string => {
 
     return `import React from 'react';
 //@ts-ignore
-export const ${componentName} = (props) => {
+export const ${componentName}: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
 ${formattedCode
         .split('\n')
@@ -61,28 +57,26 @@ ${formattedCode
 
 // Read SVG files and generate components
 const generateComponents = async () => {
-    await ensureOutputDirExists();
-
-    const files = await fs.readdir(chainsDir);
+    const files = fs.readdirSync(chainsDir);
     for (const file of files) {
         if (file.endsWith('.svg')) {
             const svgPath = path.join(chainsDir, file);
-            const svgContent = await fs.readFile(svgPath, 'utf8');
+            const svgContent = fs.readFileSync(svgPath, 'utf8');
             const componentCode = formatComponentCode(svgContent, file);
 
             const outputFilePath = path.join(outputDir, file.replace('.svg', '.tsx'));
-            await fs.writeFile(outputFilePath, componentCode);
+            fs.writeFileSync(outputFilePath, componentCode);
             console.log(`Generated: ${outputFilePath}`);
         }
     }
 
     // Generate index.ts
-    const indexContent = (await fs.readdir(outputDir))
+    const indexContent = fs.readdirSync(outputDir)
         .filter(file => file.endsWith('.tsx'))
         .map(file => `export * from './${file.replace('.tsx', '')}';`)
         .join('\n');
 
-    await fs.writeFile(path.join(outputDir, 'index.ts'), indexContent);
+    fs.writeFileSync(path.join(outputDir, 'index.ts'), indexContent);
     console.log('Generated: index.ts');
 };
 

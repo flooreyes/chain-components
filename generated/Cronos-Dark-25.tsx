@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const CronosDarkIcon = (props) => {
+export const CronosDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="25"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M252.593 511.006C237.123 519.937 218.063 519.937 202.593 511.006L25.1963 408.586C9.72625 399.654 0.196283 383.148 0.196282 365.285L0.196273 160.44C0.196272 142.576 9.72675 126.07 25.1975 117.138L202.594 14.7249C218.063 5.79424 237.122 5.79425 252.592 14.7249L429.988 117.138C445.459 126.07 454.989 142.576 454.989 160.44L454.989 365.285C454.989 383.148 445.459 399.654 429.989 408.586L252.593 511.006Z" fill="url(#paint0_radial_722_203)"/>

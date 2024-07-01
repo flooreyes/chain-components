@@ -3,7 +3,7 @@
     "version": "1.0.7",
     "description": "chain icon component library for cracked front end devs",
     "main": "generated/index.ts",
-    "types": "generated/index.d.ts",
+    "types": "generated/index.ts",
     "files": [
         "generated"
     ],
@@ -37,7 +37,6 @@
     "dependencies": {
         "@radix-ui/react-popover": "^1.0.7",
         "@vercel/next": "^4.2.18",
-        "chain-components": "^1.0.1",
         "eslint-config-prettier": "^9.1.0",
         "file-saver": "^2.0.5",
         "flatted": "^3.3.0",
@@ -64,6 +63,7 @@
         "postcss": "^8.4.39",
         "prettier": "3.2.5",
         "tailwindcss": "^3.4.4",
+        "ts-loader": "^9.5.1",
         "ts-node": "^10.9.2",
         "typescript": "^5.5.2"
     }

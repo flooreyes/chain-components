@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const SepoliaDarkIcon = (props) => {
+export const SepoliaDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="11155111"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.537 15.0607C218.007 6.12907 237.067 6.12907 252.537 15.0607L429.934 117.481C445.404 126.412 454.934 142.919 454.934 160.782V365.626C454.934 383.49 445.403 399.997 429.932 408.928L252.536 511.341C237.066 520.272 218.008 520.272 202.538 511.341L25.1418 408.928C9.67108 399.997 0.140625 383.49 0.140625 365.626V160.782C0.140625 142.919 9.67058 126.412 25.1406 117.481L202.537 15.0607Z" fill="url(#paint0_linear_709_6972)"/>

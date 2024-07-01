@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const ScrollDarkIcon = (props) => {
+export const ScrollDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="534352"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M203.134 14.8752C218.604 5.94352 237.664 5.94352 253.134 14.8752L430.53 117.295C446 126.227 455.53 142.733 455.53 160.596V365.441C455.53 383.304 446 399.811 430.529 408.743L253.133 511.156C237.663 520.087 218.604 520.087 203.135 511.156L25.7385 408.743C10.2678 399.811 0.737305 383.304 0.737305 365.441V160.596C0.737305 142.733 10.2673 126.227 25.7373 117.295L203.134 14.8752Z" fill="url(#paint0_linear_709_1669)"/>

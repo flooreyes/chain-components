@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const TronLightIcon = (props) => {
+export const TronLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M253.377 511.064C237.907 519.996 218.847 519.996 203.377 511.064L25.9805 408.644C10.5104 399.713 0.980463 383.206 0.980462 365.343L0.980453 160.499C0.980452 142.635 10.5109 126.128 25.9817 117.197L203.378 14.7835C218.848 5.85283 237.906 5.85284 253.376 14.7835L430.772 117.197C446.243 126.128 455.773 142.635 455.773 160.499L455.773 365.343C455.773 383.206 446.243 399.713 430.773 408.644L253.377 511.064Z" fill="url(#paint0_linear_709_6974)"/>

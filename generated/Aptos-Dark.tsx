@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const AptosDarkIcon = (props) => {
+export const AptosDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.619 15.3419C218.089 6.41032 237.149 6.41032 252.619 15.3419L430.016 117.762C445.486 126.693 455.016 143.2 455.016 161.063V365.907C455.016 383.771 445.485 400.278 430.014 409.209L252.618 511.623C237.148 520.553 218.09 520.553 202.62 511.623L25.2239 409.209C9.75311 400.278 0.222656 383.771 0.222656 365.907V161.063C0.222656 143.2 9.75261 126.693 25.2227 117.762L202.619 15.3419Z" fill="url(#paint0_linear_713_85)"/>

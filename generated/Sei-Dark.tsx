@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const SeiDarkIcon = (props) => {
+export const SeiDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.428 14.9142C217.898 5.98258 236.958 5.98258 252.428 14.9142L429.825 117.334C445.295 126.266 454.825 142.772 454.825 160.635V365.48C454.825 383.344 445.294 399.85 429.823 408.782L252.427 511.195C236.958 520.126 217.899 520.126 202.429 511.195L25.0329 408.782C9.5622 399.85 0.0317383 383.344 0.0317383 365.48V160.635C0.0317383 142.772 9.56169 126.266 25.0317 117.334L202.428 14.9142Z" fill="url(#paint0_radial_709_1637)"/>

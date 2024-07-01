@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const BerachainDarkIcon = (props) => {
+export const BerachainDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="42069"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M252.789 510.89C237.319 519.822 218.259 519.822 202.789 510.89L25.3926 408.471C9.92254 399.539 0.39258 383.033 0.39258 365.169L0.392582 160.325C0.392583 142.461 9.92306 125.954 25.3938 117.023L202.79 14.6097C218.26 5.67902 237.318 5.67903 252.788 14.6097L430.184 117.023C445.655 125.954 455.186 142.461 455.186 160.325L455.186 365.169C455.186 383.033 445.656 399.539 430.186 408.471L252.789 510.89Z" fill="url(#paint0_radial_709_6964)"/>

@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const SuiLightIcon = (props) => {
+export const SuiLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M252.902 510.824C237.432 519.756 218.372 519.756 202.902 510.824L25.5059 408.404C10.0358 399.473 0.505853 382.966 0.505852 365.103L0.505843 160.259C0.505843 142.395 10.0363 125.888 25.5071 116.957L202.904 14.5433C218.373 5.6126 237.432 5.61261 252.901 14.5433L430.298 116.957C445.768 125.888 455.299 142.395 455.299 160.259L455.299 365.103C455.299 382.966 445.769 399.473 430.299 408.404L252.902 510.824Z" fill="url(#paint0_radial_709_6997)"/>

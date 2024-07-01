@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const BaseLightIcon = (props) => {
+export const BaseLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="8453"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.976 15.1281C218.446 6.19645 237.506 6.19645 252.976 15.1281L430.373 117.548C445.843 126.48 455.373 142.986 455.373 160.849V365.694C455.373 383.557 445.842 400.064 430.371 408.996L252.975 511.409C237.505 520.34 218.447 520.34 202.977 511.409L25.5808 408.996C10.11 400.064 0.57959 383.557 0.57959 365.694V160.849C0.57959 142.986 10.1095 126.48 25.5796 117.548L202.976 15.1281Z" fill="url(#paint0_linear_705_125)"/>

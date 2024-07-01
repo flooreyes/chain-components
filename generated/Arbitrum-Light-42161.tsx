@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const ArbitrumLightIcon = (props) => {
+export const ArbitrumLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="42161"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M203.366 15.3644C218.837 6.43278 237.896 6.43278 253.366 15.3644L430.763 117.784C446.233 126.716 455.763 143.222 455.763 161.086V365.93C455.763 383.794 446.232 400.3 430.762 409.232L253.365 511.645C237.896 520.576 218.837 520.576 203.368 511.645L25.9712 409.232C10.5004 400.3 0.969971 383.794 0.969971 365.93V161.086C0.969971 143.222 10.4999 126.716 25.97 117.784L203.366 15.3644Z" fill="url(#paint0_radial_705_124)"/>

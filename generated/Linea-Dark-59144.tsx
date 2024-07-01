@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const LineaDarkIcon = (props) => {
+export const LineaDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="59144"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.646 14.5685C218.117 5.63688 237.176 5.63688 252.646 14.5685L430.043 116.988C445.513 125.92 455.043 142.426 455.043 160.29V365.134C455.043 382.998 445.512 399.505 430.042 408.436L252.645 510.849C237.176 519.78 218.117 519.78 202.648 510.849L25.2512 408.436C9.78046 399.505 0.25 382.998 0.25 365.134V160.29C0.25 142.426 9.77995 125.92 25.25 116.988L202.646 14.5685Z" fill="url(#paint0_linear_709_6938)"/>

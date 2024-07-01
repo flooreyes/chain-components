@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const MantleLightIcon = (props) => {
+export const MantleLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="5000"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.475 14.8127C217.945 5.88102 237.005 5.88102 252.475 14.8127L429.871 117.232C445.341 126.164 454.871 142.67 454.871 160.534V365.378C454.871 383.242 445.341 399.749 429.87 408.68L252.473 511.093C237.004 520.024 217.945 520.024 202.476 511.093L25.0793 408.68C9.60858 399.749 0.078125 383.242 0.078125 365.378V160.534C0.078125 142.67 9.60808 126.164 25.0781 117.233L202.475 14.8127Z" fill="url(#paint0_radial_722_150)"/>

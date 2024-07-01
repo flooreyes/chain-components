@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const GnosisLightIcon = (props) => {
+export const GnosisLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="100"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M203.221 14.5822C218.691 5.65055 237.751 5.65055 253.221 14.5822L430.617 117.002C446.087 125.934 455.617 142.44 455.617 160.303V365.148C455.617 383.012 446.087 399.518 430.616 408.45L253.219 510.863C237.75 519.794 218.691 519.794 203.222 510.863L25.8254 408.45C10.3547 399.518 0.824219 383.012 0.824219 365.148V160.303C0.824219 142.44 10.3542 125.934 25.8242 117.002L203.221 14.5822Z" fill="url(#paint0_radial_713_82)"/>

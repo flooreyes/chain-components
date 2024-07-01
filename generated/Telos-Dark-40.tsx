@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const TelosDarkIcon = (props) => {
+export const TelosDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="40"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M253.079 511.26C237.609 520.191 218.549 520.191 203.079 511.26L25.6826 408.84C10.2126 399.908 0.682611 383.402 0.68261 365.538L0.682601 160.694C0.6826 142.83 10.2131 126.324 25.6838 117.392L203.08 14.9788C218.55 6.04814 237.608 6.04815 253.078 14.9789L430.474 117.392C445.945 126.324 455.476 142.83 455.476 160.694L455.476 365.538C455.476 383.402 445.946 399.908 430.476 408.84L253.079 511.26Z" fill="url(#paint0_linear_722_224)"/>

@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const BlastLightIcon = (props) => {
+export const BlastLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="81457"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M203.333 15.0539C218.803 6.12223 237.863 6.12223 253.333 15.0539L430.73 117.474C446.2 126.405 455.73 142.912 455.73 160.775V365.619C455.73 383.483 446.199 399.99 430.729 408.921L253.332 511.335C237.863 520.265 218.804 520.265 203.335 511.335L25.9382 408.921C10.4674 399.99 0.936951 383.483 0.936951 365.619V160.775C0.936951 142.912 10.4669 126.405 25.937 117.474L203.333 15.0539Z" fill="url(#paint0_linear_705_123)"/>

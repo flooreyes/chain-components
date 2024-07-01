@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const TaikoLightIcon = (props) => {
+export const TaikoLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="167000"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M202.536 14.5783C218.006 5.64665 237.066 5.64664 252.536 14.5783L429.933 116.998C445.403 125.93 454.933 142.436 454.933 160.299V365.144C454.933 383.008 445.402 399.514 429.931 408.446L252.535 510.859C237.065 519.79 218.007 519.79 202.537 510.859L25.1408 408.446C9.67011 399.514 0.139648 383.008 0.139648 365.144V160.299C0.139648 142.436 9.6696 125.93 25.1397 116.998L202.536 14.5783Z" fill="url(#paint0_radial_722_241)"/>

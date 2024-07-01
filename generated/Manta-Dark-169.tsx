@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const MantaDarkIcon = (props) => {
+export const MantaDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="169"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M253.154 510.797C237.684 519.728 218.624 519.728 203.154 510.797L25.7578 408.377C10.2878 399.445 0.757806 382.939 0.757805 365.076L0.757797 160.231C0.757796 142.367 10.2883 125.861 25.759 116.929L203.156 14.516C218.625 5.58525 237.684 5.58526 253.153 14.516L430.55 116.929C446.02 125.861 455.551 142.367 455.551 160.231L455.551 365.076C455.551 382.939 446.021 399.445 430.551 408.377L253.154 510.797Z" fill="url(#paint0_linear_722_212)"/>

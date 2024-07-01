@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const CronosLightIcon = (props) => {
+export const CronosLightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="25"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M253.196 511.029C237.726 519.961 218.666 519.961 203.196 511.029L25.7998 408.609C10.3298 399.678 0.799798 383.171 0.799798 365.308L0.799789 160.464C0.799788 142.6 10.3303 126.093 25.801 117.162L203.198 14.7484C218.667 5.81768 237.726 5.81769 253.195 14.7484L430.592 117.162C446.062 126.093 455.593 142.6 455.593 160.464L455.593 365.308C455.593 383.171 446.063 399.678 430.593 408.609L253.196 511.029Z" fill="url(#paint0_radial_722_204)"/>

@@ -1,6 +1,6 @@
 import React from 'react';
 //@ts-ignore
-export const BSCDarkIcon = (props) => {
+export const BSCDarkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg id="56"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path d="M320.844 317.545L286.558 337.638V297.263L320.844 276.98V317.545Z" fill="url(#paint0_radial_718_93)"/>
