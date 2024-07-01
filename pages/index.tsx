@@ -6,6 +6,7 @@ import SearchBar from '../src/components/SearchBar';
 import Background from '../src/components/Background';
 import Modal from '../src/components/Modal';
 import loadChains from '../src/util/loadChains';
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
     const [chains, setChains] = useState<ChainsElement[]>([]);
@@ -562,6 +563,7 @@ const App = () => {
                 imageUrl={modalImageUrl}
                 svgCode={modalSvgCode}
             />
+            <Analytics />
         </div>
     );
 };
