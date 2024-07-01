@@ -9,11 +9,28 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"]
+      "@components/*": [
+        "src/components/*"
+      ]
     },
     "outDir": "./dist",
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
-  "include": ["src", "scripts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src",
+    "scripts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

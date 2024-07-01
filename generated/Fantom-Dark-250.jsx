@@ -1,4 +1,5 @@
 import React from 'react';
+//@ts-ignore
 export const FantomDarkIcon = (props) => {
     return (
         <svg id="250"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
