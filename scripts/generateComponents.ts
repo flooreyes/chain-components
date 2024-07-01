@@ -1,7 +1,6 @@
 //@ts-nocheck
 const fs = require('fs');
 const path = require('path');
-const ts = require('typescript'); // Add TypeScript compiler
 
 const chainsDir = path.join(__dirname, '../public/chains');
 const outputDir = path.join(__dirname, '../generated');
@@ -65,19 +64,13 @@ const generateComponents = async () => {
             const svgContent = fs.readFileSync(svgPath, 'utf8');
             const componentCode = formatComponentCode(svgContent, file);
 
-            const outputFilePathTs = path.join(outputDir, file.replace('.svg', '.tsx'));
-            fs.writeFileSync(outputFilePathTs, componentCode);
-            console.log(`Generated: ${outputFilePathTs}`);
-
-            // Compile TypeScript to JavaScript
-            const outputFilePathJs = path.join(outputDir, file.replace('.svg', '.js'));
-            const compiledJs = ts.transpileModule(componentCode, { compilerOptions: { module: ts.ModuleKind.ESNext } }).outputText;
-            fs.writeFileSync(outputFilePathJs, compiledJs);
-            console.log(`Generated: ${outputFilePathJs}`);
+            const outputFilePath = path.join(outputDir, file.replace('.svg', '.tsx'));
+            fs.writeFileSync(outputFilePath, componentCode);
+            console.log(`Generated: ${outputFilePath}`);
         }
     }
 
-    // Generate index.ts and index.js
+    // Generate index.ts
     const indexContent = fs.readdirSync(outputDir)
         .filter(file => file.endsWith('.tsx'))
         .map(file => `export * from './${file.replace('.tsx', '')}';`)
@@ -85,14 +78,6 @@ const generateComponents = async () => {
 
     fs.writeFileSync(path.join(outputDir, 'index.ts'), indexContent);
     console.log('Generated: index.ts');
-
-    const indexContentJs = fs.readdirSync(outputDir)
-        .filter(file => file.endsWith('.js'))
-        .map(file => `export * from './${file.replace('.js', '')}';`)
-        .join('\n');
-
-    fs.writeFileSync(path.join(outputDir, 'index.js'), indexContentJs);
-    console.log('Generated: index.js');
 };
 
 generateComponents().catch(console.error);
