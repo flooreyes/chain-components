@@ -1,14 +1,18 @@
 //@ts-nocheck
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs/promises';
+import path from 'path';
 
 const chainsDir = path.join(__dirname, '../public/chains');
 const outputDir = path.join(__dirname, '../generated');
 
 // Ensure the output directory exists
-if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
-}
+const ensureOutputDirExists = async () => {
+    try {
+        await fs.access(outputDir);
+    } catch (error) {
+        await fs.mkdir(outputDir, { recursive: true });
+    }
+};
 
 // Function to convert kebab-case to camelCase
 const toCamelCase = (str: string): string => {
@@ -57,26 +61,28 @@ ${formattedCode
 
 // Read SVG files and generate components
 const generateComponents = async () => {
-    const files = fs.readdirSync(chainsDir);
+    await ensureOutputDirExists();
+
+    const files = await fs.readdir(chainsDir);
     for (const file of files) {
         if (file.endsWith('.svg')) {
             const svgPath = path.join(chainsDir, file);
-            const svgContent = fs.readFileSync(svgPath, 'utf8');
+            const svgContent = await fs.readFile(svgPath, 'utf8');
             const componentCode = formatComponentCode(svgContent, file);
 
             const outputFilePath = path.join(outputDir, file.replace('.svg', '.tsx'));
-            fs.writeFileSync(outputFilePath, componentCode);
+            await fs.writeFile(outputFilePath, componentCode);
             console.log(`Generated: ${outputFilePath}`);
         }
     }
 
     // Generate index.ts
-    const indexContent = fs.readdirSync(outputDir)
+    const indexContent = (await fs.readdir(outputDir))
         .filter(file => file.endsWith('.tsx'))
         .map(file => `export * from './${file.replace('.tsx', '')}';`)
         .join('\n');
 
-    fs.writeFileSync(path.join(outputDir, 'index.ts'), indexContent);
+    await fs.writeFile(path.join(outputDir, 'index.ts'), indexContent);
     console.log('Generated: index.ts');
 };
 

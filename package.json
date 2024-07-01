@@ -13,7 +13,7 @@
         "start": "next start",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "generate-components": "ts-node -P tsconfig.paths.json scripts/generateComponents.ts",
-        "prepublishOnly": "npm run generate-components && npm run build",
+        "prepublishOnly": "npm run build",
         "update-package": "npm run generate-components && npm run build && npm version patch && npm publish --access public"
     },
     "repository": {
@@ -47,13 +47,12 @@
         "react-color-palette": "^7.1.0",
         "react-dom": "^18.2.0",
         "react-icons": "^5.0.1",
-        "react-tooltip": "^5.26.0",
-        "ts-node": "^10.9.2"
+        "react-tooltip": "^5.26.0"
     },
     "devDependencies": {
         "@next/eslint-plugin-next": "^14.2.4",
         "@types/node": "^20.14.9",
-        "@types/react": "^18.2.43",
+        "@types/react": "^18.3.3",
         "@types/react-dom": "^18.2.17",
         "@typescript-eslint/eslint-plugin": "^6.21.0",
         "@typescript-eslint/parser": "^6.21.0",
@@ -65,6 +64,7 @@
         "postcss": "^8.4.39",
         "prettier": "3.2.5",
         "tailwindcss": "^3.4.4",
-        "typescript": "^5.2.2"
+        "ts-node": "^10.9.2",
+        "typescript": "^5.5.2"
     }
 }
