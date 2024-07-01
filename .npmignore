@@ -1,5 +1,8 @@
-/src
-/scripts
-/public
-/node_modules
-!/dist
+# Ignore everything
+*
+
+# Except the following
+!generated
+!generated/**
+!package.json
+!LICENSE

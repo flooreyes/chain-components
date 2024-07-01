@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const chainsDir = path.join(__dirname, '../public/chains');
-const outputDir = path.join(__dirname, '../src/generated');
+const outputDir = path.join(__dirname, '../generated');
 
 // Ensure the output directory exists
 if (!fs.existsSync(outputDir)) {
@@ -43,8 +43,7 @@ const formatComponentCode = (code: string, fileName: string): string => {
         .replace(/width="[^"]*"/g, '');
 
     return `import React from 'react';
-//@ts-ignore
-export const ${componentName}: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
+export const ${componentName} = (props) => {
     return (
 ${formattedCode
         .split('\n')
@@ -64,20 +63,20 @@ const generateComponents = async () => {
             const svgContent = fs.readFileSync(svgPath, 'utf8');
             const componentCode = formatComponentCode(svgContent, file);
 
-            const outputFilePath = path.join(outputDir, file.replace('.svg', '.tsx'));
+            const outputFilePath = path.join(outputDir, file.replace('.svg', '.jsx'));
             fs.writeFileSync(outputFilePath, componentCode);
             console.log(`Generated: ${outputFilePath}`);
         }
     }
 
-    // Generate index.ts
+    // Generate index.js
     const indexContent = fs.readdirSync(outputDir)
-        .filter(file => file.endsWith('.tsx'))
-        .map(file => `export * from './${file.replace('.tsx', '')}';`)
+        .filter(file => file.endsWith('.jsx'))
+        .map(file => `export * from './${file.replace('.jsx', '')}';`)
         .join('\n');
 
-    fs.writeFileSync(path.join(outputDir, 'index.ts'), indexContent);
-    console.log('Generated: index.ts');
+    fs.writeFileSync(path.join(outputDir, 'index.js'), indexContent);
+    console.log('Generated: index.js');
 };
 
 generateComponents().catch(console.error);
