@@ -3,15 +3,16 @@
     "version": "1.0.11",
     "description": "Chain icon component library for cracked front end devs",
     "main": "generated/index.js",
+    "types": "generated/index.js",
     "files": [
-        "generated"
+      "generated"
     ],
     "scripts": {
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "generate-components": "ts-node -P tsconfig.paths.json scripts/generateComponents.ts",
+        "generate-components": "ts-node -P tsconfig.json scripts/generateComponents.ts",
         "prepublishOnly": "npm run generate-components",
         "update-package": "npm run generate-components && npm version patch && npm publish --access public"
     },

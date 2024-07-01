@@ -43,6 +43,7 @@ const formatComponentCode = (code: string, fileName: string): string => {
         .replace(/width="[^"]*"/g, '');
 
     return `import React from 'react';
+//@ts-ignore
 export const ${componentName} = (props) => {
     return (
 ${formattedCode

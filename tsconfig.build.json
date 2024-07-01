@@ -1,21 +1,11 @@
 {
+    "extends": "./tsconfig.json",
     "compilerOptions": {
-      "module": "ESNext",
-      "target": "ESNext",
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "outDir": "./dist",
-      "declaration": true,
-      "jsx": "react"
+      "noEmit": false
     },
-    "include": [
-      "generated/**/*.ts",
-      "generated/**/*.tsx"
-    ],
     "exclude": [
-      "node_modules"
+      "node_modules",
+      "src/**/*.test.ts",
+      "src/**/*.test.tsx"
     ]
   }
