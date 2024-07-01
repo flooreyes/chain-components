@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const chainsDir = path.join(__dirname, '../public/chains');
-const outputDir = path.join(__dirname, '../generated');
+const outputDir = path.join(__dirname, '../src/generated');
 
 // Ensure the output directory exists
 if (!fs.existsSync(outputDir)) {

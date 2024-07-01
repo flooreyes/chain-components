@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",
+      "target": "ESNext",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "outDir": "./dist",
+      "declaration": true,
+      "jsx": "react"
+    },
+    "include": [
+      "generated/**/*.ts",
+      "generated/**/*.tsx"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
+  
