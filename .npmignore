@@ -1,14 +1,10 @@
-node_modules
-dist
-scripts
-public
-.vscode
-.next
-coverage
-next.config.js
-tsconfig.json
-tsconfig.node.json
-.eslintrc.js
-.prettierrc
-README.md
-package.json
+# Ignore everything
+*
+
+# Except the dist/generated folder
+!/generated
+
+# And package.json, README.md, and LICENSE
+!package.json
+!README.md
+!LICENSE

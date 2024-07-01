@@ -1,16 +1,20 @@
 {
     "name": "chain-components",
-    "private": false,
-    "version": "1.0.0",
-    "type": "commonjs",
+    "version": "1.0.3",
+    "description": "chain icon component library for cracked front end devs",
+    "main": "generated/index.js", 
+    "types": "generated/index.d.ts", 
+    "files": [
+      "generated"
+    ],
     "scripts": {
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "generate-components": "ts-node --project tsconfig.paths.json scripts/generateComponents.ts",
+        "generate-components": "ts-node -P tsconfig.paths.json scripts/generateComponents.ts",
         "prepublishOnly": "npm run generate-components && npm run build",
-        "update-package": "npm run generate-components && npm run build && npm version patch && npm publish"
+        "update-package": "npm run generate-components && npm run build && npm version patch && npm publish --access public"
     },
     "repository": {
         "type": "git",
@@ -21,9 +25,10 @@
         "icons",
         "blockchain",
         "svg",
-        "typescript"
+        "typescript",
+        "components"
     ],
-    "author": "Flooreyes",
+    "author": "flooreyes",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/flooreyes/chain-components/issues"
@@ -32,7 +37,7 @@
     "dependencies": {
         "@radix-ui/react-popover": "^1.0.7",
         "@vercel/next": "^4.2.18",
-        "camelcase": "^6.2.0",
+        "chain-components": "^1.0.1",
         "eslint-config-prettier": "^9.1.0",
         "file-saver": "^2.0.5",
         "flatted": "^3.3.0",
@@ -47,7 +52,6 @@
     },
     "devDependencies": {
         "@next/eslint-plugin-next": "^14.2.4",
-        "@types/file-saver": "^2.0.7",
         "@types/node": "^20.14.9",
         "@types/react": "^18.2.43",
         "@types/react-dom": "^18.2.17",
