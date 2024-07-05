@@ -1,0 +1,25 @@
+import React from 'react';
+//@ts-ignore
+export const ZoraDarkIcon = (props) => {
+    return (
+        <svg id="7777777"  viewBox="0 0 456 526" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <path d="M202.813 14.7189C218.283 5.78726 237.343 5.78727 252.813 14.7189L430.211 117.14C445.681 126.071 455.211 142.578 455.211 160.441V365.287C455.211 383.151 445.68 399.658 430.21 408.589L252.812 511.003C237.342 519.934 218.284 519.934 202.814 511.003L25.4162 408.589C9.94546 399.658 0.414987 383.151 0.414987 365.287V160.441C0.414987 142.578 9.94494 126.071 25.415 117.14L202.813 14.7189Z" fill="url(#paint0_linear_735_227)"/>
+        <path d="M227.812 422.359C185.51 422.359 144.941 405.555 115.029 375.643C85.1169 345.731 68.3125 305.161 68.3125 262.859C68.3125 220.557 85.1169 179.988 115.029 150.076C144.941 120.164 185.51 103.359 227.812 103.359C270.115 103.359 310.684 120.164 340.596 150.076C370.508 179.988 387.312 220.557 387.312 262.859C387.312 305.161 370.508 345.731 340.596 375.643C310.684 405.555 270.115 422.359 227.812 422.359Z" fill="url(#paint1_radial_735_227)"/>
+        <defs>
+        <linearGradient id="paint0_linear_735_227" x1="195.71" y1="303.099" x2="364.091" y2="75.2897" gradientUnits="userSpaceOnUse">
+        <stop/>
+        <stop offset="1" stopColor="#2D2D2D"/>
+        </linearGradient>
+        <radialGradient id="paint1_radial_735_227" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300.208 189.117) rotate(180) scale(269.431)">
+        <stop offset="0.007" stopColor="#F2CEFE"/>
+        <stop offset="0.191" stopColor="#AFBAF1"/>
+        <stop offset="0.498" stopColor="#4281D3"/>
+        <stop offset="0.667" stopColor="#2E427D"/>
+        <stop offset="0.823" stopColor="#230101"/>
+        <stop offset="1" stopColor="#8F6B40"/>
+        </radialGradient>
+        </defs>
+        </svg>
+        
+    );
+};

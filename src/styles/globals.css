@@ -57,7 +57,7 @@ body {
     animation: fadeIn 2000ms ease-in-out forwards;
 }
 
-/* svg {
+svg {
     transition: all .4s ease-out ;
 
-} */
+}

@@ -7,6 +7,7 @@ import Background from '../src/components/Background';
 import Modal from '../src/components/Modal';
 import loadChains from '../src/util/loadChains';
 import { Analytics } from '@vercel/analytics/react';
+import TopBar from '../src/components/TopBar'
 
 const App = () => {
     const [chains, setChains] = useState<ChainsElement[]>([]);
@@ -41,7 +42,7 @@ const App = () => {
     const clickStartTime = useRef<number | null>(null);
     const clickThreshold = 200; // Threshold in milliseconds to distinguish between click and drag
 
-    const size = 0.5; // Scale factor for the size of each chain
+    const size = 0.4; // Scale factor for the size of each chain
     const margin = 250; // Margin around the content
     const minimapScale = 0.08; // Scale factor for minimap
     const dampingFactor = 0.7; // Damping factor for slower panning
@@ -52,13 +53,13 @@ const App = () => {
 
     const hexWidth = 456 * size;
     const hexHeight = 526 * size;
-    const spacing = 30;
+    const spacing = 20;
 
     useEffect(() => {
         const load = async () => {
             const loadedChains = await loadChains();
             const totalChains = loadedChains.length;
-            const aspectRatio = 4 / 4; // Landscape aspect ratio
+            const aspectRatio = 3 / 4; // Landscape aspect ratio
 
             // Calculate the best even number of columns based on the aspect ratio
             let bestColumns = Math.max(
@@ -510,6 +511,7 @@ const App = () => {
                 onMouseEnter={() => setIsOverCanvas(false)}
                 onMouseLeave={() => setIsOverCanvas(true)}
             />
+            <TopBar />
             <div className="flex flex-col items-center" 
                 onMouseMove={handleViewportPan} 
                 onMouseEnter={() => setIsOverCanvas(true)} 
